@@ -360,34 +360,46 @@ label {
   gap: 12px;
 }
 
-/* Mobile: Full width for col-12 (stack vertically) */
-.row.g-3 > [class*="col-"] {
+/* Filter row - All 3 filters in one row */
+.filter-row {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 12px;
   width: 100%;
-  flex: 0 0 100%;
-  max-width: 100%;
 }
 
-/* Small tablets (576px - 767px): col-sm-6 (2 columns) */
-@media (min-width: 576px) and (max-width: 767.98px) {
-  .row.g-3 > .col-sm-6 {
-    flex: 0 0 calc(50% - 6px);
-    max-width: calc(50% - 6px);
-    width: calc(50% - 6px);
-  }
+.filter-row > [class*="col-"] {
+  flex: 1 1 0;
+  min-width: 0;
+  width: 0;
+  max-width: none;
 }
 
-/* Tablet and Desktop (768px+): col-md-4 (3 columns) */
-@media (min-width: 768px) {
-  .row.g-3 > .col-md-4 {
-    flex: 0 0 calc(33.333333% - 8px);
-    max-width: calc(33.333333% - 8px);
-    width: calc(33.333333% - 8px);
+/* Ensure all 3 filters stay in one row on tablet and above */
+@media (min-width: 576px) {
+  .filter-row {
+    flex-wrap: nowrap !important;
   }
   
-  .row.g-3 > .col-sm-6.col-md-4 {
-    flex: 0 0 calc(33.333333% - 8px);
-    max-width: calc(33.333333% - 8px);
-    width: calc(33.333333% - 8px);
+  .filter-row > .col-sm-4,
+  .filter-row > .col-md-4 {
+    flex: 0 0 calc(33.333333% - 8px) !important;
+    max-width: calc(33.333333% - 8px) !important;
+    width: calc(33.333333% - 8px) !important;
+    min-width: 0;
+  }
+}
+
+/* For very small mobile screens, allow wrapping */
+@media (max-width: 575.98px) {
+  .filter-row {
+    flex-wrap: wrap;
+  }
+  
+  .filter-row > .col-12 {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 }
 
