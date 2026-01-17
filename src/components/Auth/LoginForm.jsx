@@ -19,32 +19,36 @@ const LoginForm = ({ onLogin }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="p-4 border rounded">
-      <h4 className="mb-3">Login</h4>
+    <form onSubmit={handleSubmit} className="shadow-lg rounded p-5" style={{ width: "100%", maxWidth: "400px" }}>
+      <h4 className="text-center mb-4">Sign In</h4>
 
-      {error && <p className="text-danger">{error}</p>}
+      {error && <div className="alert alert-danger mb-3">{error}</div>}
 
       <div className="mb-3">
-        <label>Email</label>
+        <label className="form-label">Email Address</label>
         <input
           type="email"
-          className="form-control"
+          className="form-control form-control-lg"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          placeholder="Enter your email"
         />
       </div>
 
-      <div className="mb-3">
-        <label>Password</label>
+      <div className="mb-4">
+        <label className="form-label">Password</label>
         <input
           type="password"
-          className="form-control"
+          className="form-control form-control-lg"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          placeholder="Enter your password"
         />
       </div>
 
-      <button className="btn btn-primary w-100">Login</button>
+      <button type="submit" className="btn btn-primary w-100 btn-lg">
+        Sign In
+      </button>
     </form>
   );
 };

@@ -25,18 +25,20 @@ const EmployeeRow = ({ employee, onEdit, onDelete, onToggleStatus }) => {
         />
       </td>
       <td>
-        <button
-          className="btn btn-sm btn-primary me-2"
-          onClick={() => onEdit(employee)}
-        >
-          Edit
-        </button>
-        <button
-          className="btn btn-sm btn-danger"
-          onClick={() => onDelete(employee.id)}
-        >
-          Delete
-        </button>
+        <div className="d-flex action-buttons-group">
+          <button
+            className="btn btn-sm btn-primary action-btn"
+            onClick={() => onEdit(employee)}
+          >
+            Edit
+          </button>
+          <button
+            className="btn btn-sm btn-danger action-btn"
+            onClick={() => onDelete(employee.id)}
+          >
+            Delete
+          </button>
+        </div>
       </td>
     </tr>
   );
