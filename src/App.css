@@ -379,15 +379,15 @@ label {
 /* Tablet and Desktop (768px+): col-md-4 (3 columns) */
 @media (min-width: 768px) {
   .row.g-3 > .col-md-4 {
-    flex: 0 0 calc(33.333333% - 8px);
-    max-width: calc(33.333333% - 8px);
-    width: calc(33.333333% - 8px);
+    flex: 0 0 calc((100% - 32px) / 3);
+    max-width: calc((100% - 32px) / 3);
+    width: calc((100% - 32px) / 3);
   }
-  
+
   .row.g-3 > .col-sm-6.col-md-4 {
-    flex: 0 0 calc(33.333333% - 8px);
-    max-width: calc(33.333333% - 8px);
-    width: calc(33.333333% - 8px);
+    flex: 0 0 calc((100% - 32px) / 3);
+    max-width: calc((100% - 32px) / 3);
+    width: calc((100% - 32px) / 3);
   }
 }
 
