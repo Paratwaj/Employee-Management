@@ -34,6 +34,11 @@ const MainLayout = ({ children }) => {
   ></div>
 )}
 
+        <h5 className="mobile-title">HR Admin</h5>
+      </div>
+      {sidebarOpen && (
+        <div className="sidebar-overlay" onClick={closeSidebar}></div>
+      )}
       <Sidebar isOpen={sidebarOpen} onClose={closeSidebar} />
       <div className="main-content">
         {children}
