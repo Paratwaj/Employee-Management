@@ -83,6 +83,9 @@ body {
 .table {
   background-color: #ffffff;
   font-size: 14px;
+  width: 100%;
+  overflow-x: auto;
+  display: block;
 }
 
 .table thead {
@@ -231,6 +234,7 @@ form h5 {
 .row.g-3 .form-control {
   padding: 6px 10px;
   font-size: 13px;
+  min-width: 100px;
 }
 
 .form-control:focus {
@@ -380,15 +384,15 @@ label {
 /* Tablet and Desktop (768px+): col-md-4 (3 columns) */
 @media (min-width: 768px) {
   .row.g-3 > .col-md-4 {
-    flex: 0 0 calc((100% - 32px) / 3);
-    max-width: calc((100% - 32px) / 3);
-    width: calc((100% - 32px) / 3);
+    flex: 0 0 calc((100% - 40px) / 3);
+    max-width: calc((100% - 40px) / 3);
+    width: calc((100% - 40px) / 3);
   }
 
   .row.g-3 > .col-sm-6.col-md-4 {
-    flex: 0 0 calc((100% - 32px) / 3);
-    max-width: calc((100% - 32px) / 3);
-    width: calc((100% - 32px) / 3);
+    flex: 0 0 calc((100% - 40px) / 3);
+    max-width: calc((100% - 40px) / 3);
+    width: calc((100% - 40px) / 3);
   }
 }
 
@@ -424,7 +428,7 @@ label {
    ======================================== */
 
 .action-buttons-group {
-  gap: 8px;
+  gap: 12px;
 }
 
 .action-btn {
@@ -459,11 +463,6 @@ label {
     padding: 8px;
   }
 
-  .btn {
-    padding: 5px 10px;
-    font-size: 11px;
-  }
-}
 
 /* ========================================
    MODAL STYLING
@@ -513,6 +512,8 @@ label {
 
 .modal-backdrop .modal-body {
   padding: 20px;
+  max-height: 70vh;
+  overflow-y: auto;
 }
 
 .modal-backdrop .modal-footer {
