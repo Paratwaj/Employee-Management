@@ -24,6 +24,7 @@ const EmployeeRow = ({ employee, onEdit, onDelete, onToggleStatus }) => {
           onChange={() => onToggleStatus(employee.id)}
         />
       </td>
+      <td className="no-print">
       <td>
         <div className="d-flex action-buttons-group">
           <button
