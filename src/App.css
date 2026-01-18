@@ -80,12 +80,18 @@ body {
    TABLE STYLING - Employee List
    ======================================== */
 
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 .table {
   background-color: #ffffff;
   font-size: 14px;
   width: 100%;
-  overflow-x: auto;
-  display: block;
+  display: table;
+  border-collapse: collapse;
 }
 
 .table thead {
@@ -323,10 +329,11 @@ label {
 .container-fluid {
   padding-left: 0;
   padding-right: 0;
+  width: 100%;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: none;
 }
 
 /* Page Header - Employees and Dashboard */
@@ -462,7 +469,7 @@ label {
   .table tbody td {
     padding: 8px;
   }
-
+}
 
 /* ========================================
    MODAL STYLING

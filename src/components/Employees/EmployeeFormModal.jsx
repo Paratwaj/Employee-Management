@@ -83,17 +83,6 @@ const EmployeeFormModal = ({ selectedEmployee, onSave, onClose }) => {
     >
       <div className="modal-dialog modal-lg" onClick={(e) => e.stopPropagation()}>
         <div className="modal-content">
-          <div className="modal-header">
-            <h5 className="modal-title">
-              {selectedEmployee ? "Edit Employee" : "Add New Employee"}
-            </h5>
-            <button
-              type="button"
-              className="btn-close"
-              onClick={onClose}
-            ></button>
-          </div>
-
           <form onSubmit={handleSubmit}>
             <div className="modal-body">
               {error && <div className="alert alert-danger mb-3">{error}</div>}

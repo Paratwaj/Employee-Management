@@ -25,11 +25,15 @@ const MainLayout = ({ children }) => {
           <span></span>
           <span></span>
         </button>
-        <h5 className="mobile-title">HR Admin</h5>
+        <h5 className="mobile-title">Employee Management</h5>
       </div>
-      {sidebarOpen && (
-        <div className="sidebar-overlay" onClick={closeSidebar}></div>
-      )}
+     {sidebarOpen && (
+  <div
+    className="sidebar-overlay d-md-none"
+    onClick={closeSidebar}
+  ></div>
+)}
+
       <Sidebar isOpen={sidebarOpen} onClose={closeSidebar} />
       <div className="main-content">
         {children}
