@@ -92,6 +92,9 @@ body {
   width: 100%;
   display: table;
   border-collapse: collapse;
+.table {
+  background-color: #ffffff;
+  font-size: 14px;
 }
 
 .table thead {
@@ -336,6 +339,10 @@ label {
   max-width: none;
 }
 
+.container {
+  max-width: 1200px;
+}
+
 /* Page Header - Employees and Dashboard */
 .page-header {
   display: flex;
@@ -400,6 +407,15 @@ label {
     flex: 0 0 calc((100% - 40px) / 3);
     max-width: calc((100% - 40px) / 3);
     width: calc((100% - 40px) / 3);
+    flex: 0 0 calc(33.333333% - 8px);
+    max-width: calc(33.333333% - 8px);
+    width: calc(33.333333% - 8px);
+  }
+  
+  .row.g-3 > .col-sm-6.col-md-4 {
+    flex: 0 0 calc(33.333333% - 8px);
+    max-width: calc(33.333333% - 8px);
+    width: calc(33.333333% - 8px);
   }
 }
 
@@ -436,6 +452,7 @@ label {
 
 .action-buttons-group {
   gap: 12px;
+  gap: 8px;
 }
 
 .action-btn {
@@ -468,6 +485,11 @@ label {
 
   .table tbody td {
     padding: 8px;
+  }
+
+  .btn {
+    padding: 5px 10px;
+    font-size: 11px;
   }
 }
 

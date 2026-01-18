@@ -23,6 +23,7 @@ const Sidebar = ({ isOpen = false, onClose }) => {
     <nav className={`sidebar ${isOpen ? "show" : ""}`}>
       <div className="sidebar-header">
         <h5>Employee Management</h5>
+        <h5>HR Admin</h5>
       </div>
 
       <ul className="nav flex-column">
